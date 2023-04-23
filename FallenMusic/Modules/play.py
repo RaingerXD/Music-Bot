@@ -57,6 +57,7 @@ from FallenMusic.Helpers.gets import get_file_name, get_url
 from FallenMusic.Helpers.inline import buttons
 from FallenMusic.Helpers.queue import put
 from FallenMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
+from FallenMusic.Helpers.mustjoin import subcribe
 
 
 @app.on_message(
@@ -65,6 +66,7 @@ from FallenMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
     & ~filters.forwarded
     & ~filters.via_bot
 )
+@subcribe
 async def play(_, message: Message):
     fallen = await message.reply_text("» ᴘʀᴏᴄᴇssɪɴɢ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...")
     try:
