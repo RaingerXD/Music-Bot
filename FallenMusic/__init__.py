@@ -59,7 +59,8 @@ app2 = Client(
 pytgcalls = PyTgCalls(app2)
 
 SUDOERS = filters.user()
-SUNAME = config.SUPPORT_CHAT.split("me/")[1]
+#SUNAME = config.SUPPORT_CHAT.split("me/")[1]
+SUNAME = config.SUPPORT_CHAT
 
 
 async def fallen_startup():
@@ -92,8 +93,8 @@ async def fallen_startup():
     ASS_USERNAME = getme2.username
     ASS_MENTION = getme2.mention
     try:
-        await app2.join_chat("Indexat")
-        await app2.join_chat("Sherif_World")
+        await app2.join_chat("raingerproject")
+        await app2.join_chat("raingersupport")
     except:
         pass
 
